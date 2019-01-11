@@ -1,0 +1,109 @@
+import Vue from 'vue'
+import 'element-ui/lib/theme-chalk/index.css';
+import {
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer,
+  Input,
+  Form,
+  FormItem,
+  Row,
+  Col,
+  Tabs,
+  TabPane,
+  Table,
+  TableColumn,
+  Badge,
+  Button,
+  Icon,
+  Rate,
+  Dialog,
+  DatePicker,
+  TimePicker,
+  Card,
+  Switch,
+  Pagination,
+  Select,
+  OptionGroup,
+  Option,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Checkbox,
+  CheckboxGroup,
+  Radio,
+  RadioGroup,
+  RadioButton,
+  Progress,
+  Steps,
+  Step,
+  Tooltip,
+  Popover,
+  Tag,
+  Collapse,
+  CollapseItem,
+  Tree,
+  Loading,
+  Cascader,
+  InputNumber,
+  Message,
+  Menu,
+  MenuItem,
+  Submenu,
+  MenuItemGroup
+} from 'element-ui'
+Vue.component('el-container',Container);
+Vue.component('el-header',Header);
+Vue.component('el-aside',Aside);
+Vue.component('el-main',Main);
+Vue.component('el-footer',Footer);
+Vue.component('el-input',Input);
+Vue.component('el-form',Form);
+Vue.component('el-form-item',FormItem);
+Vue.component('el-tabs',Tabs);
+Vue.component('el-tab-pane',TabPane);
+Vue.component('el-table',Table);
+Vue.component('el-table-column',TableColumn);
+Vue.component('el-badge',Badge);
+Vue.component('el-button',Button);
+Vue.component('el-icon',Icon);
+Vue.component('el-rate',Rate);
+Vue.component('el-dialog',Dialog);
+Vue.component('el-date-picker',DatePicker);
+Vue.component('el-time-select',TimePicker);
+Vue.component('el-row',Row);
+Vue.component('el-col',Col);
+Vue.component('el-card',Card);
+Vue.component('el-switch',Switch);
+Vue.component('el-pagination',Pagination);
+Vue.component('el-select',Select);
+Vue.component('el-option-group',OptionGroup);
+Vue.component('el-option',Option);
+Vue.component('el-dropdown',Dropdown);
+Vue.component('el-dropdown-menu',DropdownMenu);
+Vue.component('el-dropdown-item',DropdownItem);
+Vue.component('el-checkbox',Checkbox);
+Vue.component('el-checkbox-group',CheckboxGroup);
+Vue.component('el-radio',Radio);
+Vue.component('el-radio-group',RadioGroup);
+Vue.component('el-radio-button',RadioButton);
+Vue.component('el-progress',Progress);
+Vue.component('el-steps',Steps);
+Vue.component('el-step',Step);
+Vue.component('el-popover',Popover);
+Vue.component('el-tooltip',Tooltip);
+Vue.component('el-tag',Tag);
+Vue.component('el-collapse',Collapse);
+Vue.component('el-collapse-item',CollapseItem);
+Vue.component('el-tree',Tree);
+Vue.component('el-cascader',Cascader);
+Vue.component('el-input-number',InputNumber);
+Vue.component('el-menu',Menu);
+Vue.component('el-menu-item',MenuItem);
+Vue.component('el-submenu',Submenu);
+Vue.component('el-menu-item-group',MenuItemGroup);
+
+
+Vue.prototype.$Message = Message;
