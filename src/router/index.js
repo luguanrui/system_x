@@ -44,7 +44,7 @@ export default new Router({
           component: scheduleControl
         },
         {
-          path: 'simplement-desc',
+          path: 'implement-desc',
           component: implementDesc
         },
         {

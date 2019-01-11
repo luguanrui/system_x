@@ -17,7 +17,7 @@
       </el-submenu>
       <el-submenu index="4">
         <template slot="title">绿色施工</template>
-        <el-menu-item index="simplement-desc">绿色施工工艺工法说明</el-menu-item>
+        <el-menu-item index="implement-desc">绿色施工工艺工法说明</el-menu-item>
         <el-menu-item index="visual-simulation">关键工艺可视化模拟</el-menu-item>
         <el-menu-item index="crash-detection">碰撞检测</el-menu-item>
       </el-submenu>
