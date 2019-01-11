@@ -1,5 +1,7 @@
 <template>
-  <div>工程量统计</div>
+  <div>
+    <img src="./17.png" alt="" width="100%">
+  </div>
 </template>
 <script>
 export default {
