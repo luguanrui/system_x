@@ -1,0 +1,41 @@
+@import './common.scss';
+@import './variables.scss';
+
+// home
+.sys-container {
+    position: relative;
+}
+.sys-container .el-header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: solid 1px #e6e6e6;
+    background:$background-color;
+}
+.sys-container .sys-container-aside {
+    position: fixed;
+    left: 0;
+    border-bottom: solid 1px #e6e6e6;
+}
+.sys-container .sys-container-main {
+    margin-left: 200px;
+}
+
+// header
+.sys-header{
+    text-align: left;
+    color: #fff;
+    line-height: 60px;
+}
+
+// aside
+.sys-aside .el-submenu__title {
+    text-align: left;
+}
+.sys-aside .el-submenu .el-menu-item {
+    text-align: left;
+}
+.sys-aside .el-menu-item{
+    text-align: left
+}

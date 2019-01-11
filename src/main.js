@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './common/common.scss'
+import './common/style.scss'
 import './utils/element-ui'//按需引入elementui组件
 
 Vue.config.productionTip = false

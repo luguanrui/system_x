@@ -1,14 +1,14 @@
 <template>
-  <div class="container">
+  <div class="sys-container">
     <el-container>
       <el-header>
-         <v-header></v-header>
+        <v-header></v-header>
       </el-header>
-      <el-container>
-        <el-aside width="200px">
+      <el-container style="margin-top: 60px">
+        <el-aside class="sys-container-aside" width="200px">
           <v-aside></v-aside>
         </el-aside>
-        <el-main>
+        <el-main class="sys-container-main">
           <router-view></router-view>
         </el-main>
       </el-container>
@@ -17,16 +17,10 @@
 </template>
 
 <script>
-import vHeader from '@/components/header/index.vue'
-import vAside from '@/components/aside/index.vue'
+import vHeader from "@/components/header/index.vue";
+import vAside from "@/components/aside/index.vue";
 export default {
   components: { vHeader, vAside }
-}
+};
 </script>
-
-<style lang="scss">
-.header {
-  background: #000;
-}
-</style>
 

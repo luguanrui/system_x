@@ -15,8 +15,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-.sys-header--title{
-  text-align: left
-}
-</style>

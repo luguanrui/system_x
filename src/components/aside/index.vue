@@ -37,15 +37,4 @@ export default {
 
 }
 </script>
-<style lang="scss">
-.sys-aside .el-submenu__title {
-  text-align: left;
-}
-.sys-aside .el-submenu .el-menu-item {
-  text-align: left;
-}
-.sys-aside .el-menu-item{
-  text-align: left
-}
-</style>
 
