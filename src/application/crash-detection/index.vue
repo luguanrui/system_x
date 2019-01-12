@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sys-crash-detection">
     <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
       <el-tab-pane label="碰撞点展示" name="first">
         <img src="./13.jpg" alt="" width="100%">

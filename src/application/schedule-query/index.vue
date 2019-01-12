@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sys-schedule-query">
     <el-table
       :data="data"
       style="width: 100%"

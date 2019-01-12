@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sys-visual-simulation">
     <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
       <el-tab-pane label="可视化模拟" name="first">
         <video controls="controls" width="500" height="500">

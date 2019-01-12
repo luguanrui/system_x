@@ -37,7 +37,7 @@
     text-align: left;
 }
 .sys-aside .el-menu-item{
-    text-align: left
+    text-align: left;
 }
 
 // implement-desc{
@@ -54,4 +54,18 @@
     .title{
         text-align: left
     }
+}
+// model-iview
+.sys-model-iview,
+.sys-model-manage,
+.sys-schedule-query,
+.sys-schedule-control,
+.sys-implement-desc,
+.sys-visual-simulation,
+.sys-crash-detection,
+.sys-quantitative-statistics,
+.sys-risk-query,
+.sys-safety-precaution{
+    width: 800px;
+    margin: 0 auto;
 }

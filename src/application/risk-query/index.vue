@@ -1,5 +1,5 @@
 <template>
-  <div class="sys-implement-desc">
+  <div class="sys-risk-query">
     <div class="sys-implement-desc-button">
       <el-button type="primary">导出表格</el-button>
     </div>
