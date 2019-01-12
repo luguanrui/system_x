@@ -21,7 +21,7 @@
         <el-menu-item index="visual-simulation">关键工艺可视化模拟</el-menu-item>
         <el-menu-item index="crash-detection">碰撞检测</el-menu-item>
       </el-submenu>
-      <el-menu-item index="quantitative-statistics">
+      <el-menu-item index="quantitative-statistics" class="quantitative-statistics">
         <span slot="title">工程量统计</span>
       </el-menu-item>
       <el-submenu index="6">

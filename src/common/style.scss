@@ -30,6 +30,22 @@
 }
 
 // aside
+.sys-aside .el-submenu{
+    background-color: $background-color;
+    &:hover{
+        background-color: $background-color;
+    }
+    .el-submenu__title{
+        color: #fff;
+    }
+    .el-submenu__title i{
+        color: #fff;
+    }
+}
+.sys-aside  .quantitative-statistics{
+    background-color: $background-color;
+    color: #fff;
+}
 .sys-aside .el-submenu__title {
     text-align: left;
 }
