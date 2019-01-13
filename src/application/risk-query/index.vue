@@ -30,7 +30,76 @@ export default {
           reason: "透水和坍塌",
           rank: 4
         },
-
+         {
+          stage: "交通疏解",
+          desc: "施工围挡外导向标识不明显，车辆有可能冲入施工现场",
+          location: "周边围挡",
+          reason: "车辆伤害",
+          rank: 2,
+        },
+          {
+          stage: "交通疏解",
+          desc: "围挡大门及道路处无人指挥，施工车辆危及社会车辆及行人",
+          location: "周围围挡",
+          reason: "机械伤害",
+          rank: 3,
+        },
+          {
+          stage: "基坑围护",
+          desc: "围护结构插入深度不呆，引起失稳",
+          location: "地下连续墙",
+          reason: "坍塌",
+          rank: 3
+        },
+          {
+          stage: "基坑围护",
+          desc: "勘察不详，开挖破坏地下管线",
+          location: "地下连续墙",
+          reason: "透水及坍塌",
+          rank: 4,
+        },
+          {
+          stage: "基坑围护",
+          desc: "吊装钢筋笼时，操作不当，引起人身伤害",
+          location: "地下连续墙",
+          reason: "机械伤害",
+          rank: 3,
+        },
+          {
+          stage: "基坑围护",
+          desc: "吊装钢筋笼时，操作不当，起重机械倾覆",
+          location: "地下连续墙",
+          reason: "起重伤害",
+          rank: 4
+        },
+         {
+          stage: "基坑围护",
+          desc: "地质软弱,混凝土浇筑时塌土",
+          location: "地下连续墙",
+          reason: "透水及坍塌",
+          rank: 3
+        },
+          {
+          stage: "基坑围护",
+          desc: "导墙拆撑后没加横向支撑",
+          location: "地下连续墙",
+          reason: "坍塌",
+          rank: 4
+        },
+          {
+          stage: "基坑围护",
+          desc: "混凝土导墙浇筑和养护时，重型机械、车辆在其附近作业",
+          location: "地下连续墙",
+          reason: "坍塌",
+          rank: 3
+        },
+          {
+          stage: "土方工程",
+          desc: "勘察不详，土方开挖破坏地下管线",
+          location: "土方开挖部位",
+          reason: "地下连续墙",
+          rank: 3
+        }
       ]
     };
   }
