@@ -14,64 +14,121 @@ import quantitativeStatistics from '@/application/quantitative-statistics'
 import riskQuery from '@/application/risk-query'
 import safetyPrecaution from '@/application/safety-precaution'
 
+import { getCookie } from 'utils-library'
+
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      component: Home,
-      redirect: 'project-profile',
-      children: [
-        {
-          path: 'project-profile',
-          component: projectProfile
+const routes = [
+  {
+    path: '/',
+    component: Home,
+    redirect: 'project-profile',
+    children: [
+      {
+        path: 'project-profile',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'model-iview',
-          component: modelIview
+        component: projectProfile
+      },
+      {
+        path: 'model-iview',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'model-manage',
-          component: modelManage
+        component: modelIview
+      },
+      {
+        path: 'model-manage',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'schedule-query',
-          component: scheduleQuery
+        component: modelManage
+      },
+      {
+        path: 'schedule-query',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'schedule-control',
-          component: scheduleControl
+        component: scheduleQuery
+      },
+      {
+        path: 'schedule-control',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'implement-desc',
-          component: implementDesc
+        component: scheduleControl
+      },
+      {
+        path: 'implement-desc',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'visual-simulation',
-          component: visualSimulation
+        component: implementDesc
+      },
+      {
+        path: 'visual-simulation',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'crash-detection',
-          component: crashDetection
+        component: visualSimulation
+      },
+      {
+        path: 'crash-detection',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'quantitative-statistics',
-          component: quantitativeStatistics
+        component: crashDetection
+      },
+      {
+        path: 'quantitative-statistics',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'risk-query',
-          component: riskQuery
+        component: quantitativeStatistics
+      },
+      {
+        path: 'risk-query',
+        meta: {
+          requireAuth: true,
         },
-        {
-          path: 'safety-precaution',
-          component: safetyPrecaution
+        component: riskQuery
+      },
+      {
+        path: 'safety-precaution',
+        meta: {
+          requireAuth: true,
         },
-      ]
-    },
-    {
-      path: '/login',
-      component: Login
-    }
-  ]
+        component: safetyPrecaution
+      },
+    ]
+  },
+  {
+    path: '/login',
+    component: Login
+  }
+]
+
+const router = new Router({
+  routes: routes
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requireAuth) {
+    let user = getCookie('user')
+    if (user) {
+      if (to.path === '/login') {
+        next('/project-profile');
+      } else {
+        next();
+      }
+    } else {
+      console.log('没有');
+      next('/login');
+    }
+  } else {
+    next();
+  }
+});
+
+export default router
