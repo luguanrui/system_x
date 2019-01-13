@@ -14,7 +14,7 @@ import quantitativeStatistics from '@/application/quantitative-statistics'
 import riskQuery from '@/application/risk-query'
 import safetyPrecaution from '@/application/safety-precaution'
 
-import { getCookie } from 'utils-library'
+import { getCookie ,removeCookie} from 'utils-library'
 
 Vue.use(Router)
 
@@ -127,6 +127,7 @@ router.beforeEach((to, from, next) => {
       next('/login');
     }
   } else {
+    removeCookie('user')
     next();
   }
 });
