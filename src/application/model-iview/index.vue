@@ -1,8 +1,11 @@
 <template>
-  <div class="sys-model-iview">模型浏览</div>
+    <div class="sys-model-iview">
+
+    </div>
 </template>
 <script>
-export default {
+    export default {
 
-}
+
+    }
 </script>

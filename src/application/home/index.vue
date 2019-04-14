@@ -23,4 +23,3 @@ export default {
   components: { vHeader, vAside }
 };
 </script>
-

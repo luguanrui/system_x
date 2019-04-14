@@ -2,146 +2,164 @@
 @import './variables.scss';
 
 // login
-.sys-login-wrapper{
-    background: url('../application/login/3.jpg') no-repeat;
-    background-size:100% 100%;
-    height: 100%;
-    .title{
-        position: absolute;
-        top: 80px;
-        width: 100%;
-        text-align: center;
-        color: #000;
-    }
+.sys-login-wrapper {
+  background: url('../application/login/3.jpg') no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  .title {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
 }
-.sys-login{
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .sys-login-img{
-        img{
-            display: inline-block;
-            filter: blur(1px);
-        }
+
+.sys-login {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .sys-login-img {
+    img {
+      display: inline-block;
+      filter: blur(1px);
     }
-    .sys-login-form{
-        .el-form-item__label{
-            color: #000;
-        }
-        .input-style {
-            width: 400px;
-            margin: 30px auto;
-        }
-        .image-verify--content {
-            display: inline;
-        }
+  }
+  .sys-login-form {
+    .el-form-item__label {
+      color: #000;
     }
+    .input-style {
+      width: 400px;
+      margin: 30px auto;
+    }
+    .image-verify--content {
+      display: inline;
+    }
+  }
 }
 
 // home
 .sys-container {
-    position: relative;
+  position: relative;
 }
+
 .sys-container .el-header {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    border-bottom: solid 1px #e6e6e6;
-    background:$background-color;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: solid 1px #e6e6e6;
+  background: $background-color;
 }
+
 .sys-container .sys-container-aside {
-    position: fixed;
-    left: 0;
-    border-bottom: solid 1px #e6e6e6;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  border-bottom: solid 1px #e6e6e6;
+  background: #eee;
 }
+
 .sys-container .sys-container-main {
-    margin-left: 200px;
+  margin-left: 200px;
 }
 
 // header
-.sys-header{
-    display: flex;
-    justify-content: space-between;
-    line-height: 60px;
-    .sys-header--title{
-        text-align: left;
-        color: #fff;
-        .logo{
-            line-height: 60px;
-            display: inline-block;
-            vertical-align: middle;
-            width: 40px;
-            height: 40px;
-            img{
-                width: 100%;
-            }
-        }
+.sys-header {
+  display: flex;
+  justify-content: space-between;
+  line-height: 60px;
+  .sys-header--title {
+    text-align: left;
+    color: #fff;
+    .logo {
+      line-height: 60px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 40px;
+      height: 40px;
+      img {
+        width: 100%;
+      }
     }
-    .logout-btn{
-        .el-button--text{
-            color: #fff;
-        }
+  }
+  .logout-btn {
+    .el-button--text {
+      color: #fff;
     }
+  }
 }
 
 // aside
-.sys-aside .el-submenu{
+.sys-aside .el-submenu {
+  background-color: $background-color;
+  &:hover {
     background-color: $background-color;
-    &:hover{
-        background-color: $background-color;
-    }
-    .el-submenu__title{
-        color: #fff;
-    }
-    .el-submenu__title i{
-        color: #fff;
-    }
-}
-.sys-aside  .quantitative-statistics{
-    background-color: $background-color;
+  }
+  .el-submenu__title {
     color: #fff;
+  }
+  .el-submenu__title i {
+    color: #fff;
+  }
 }
+
+.sys-aside .quantitative-statistics {
+  background-color: $background-color;
+  color: #fff;
+}
+
 .sys-aside .el-submenu__title {
-    text-align: left;
+  text-align: left;
 }
+
 .sys-aside .el-submenu .el-menu-item {
-    text-align: left;
+  text-align: left;
 }
-.sys-aside .el-menu-item{
-    text-align: left;
+
+.sys-aside .el-menu-item {
+  text-align: left;
 }
 
 // implement-desc{
-.sys-implement-desc{
+.sys-implement-desc {
 
 }
-.sys-implement-desc-button{
-    margin-bottom: 20px;
-    text-align: right;
+
+.sys-implement-desc-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sys-implement-desc-button-group{
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 // safety-precaution
-.sys-safety-precaution{
-    .title{
-        text-align: left
-    }
-}
-.project-profile {
-    // width: 800px;
-    margin: 0 auto;
-    .title {
-      font-size: 20px;
-      text-align: left;
-    }
-    .text {
-      margin-bottom: 30px;
-      text-align: justify;
-      line-height: 40px;
-      font-size: 16px;
-    }
+.sys-safety-precaution {
+  .title {
+    text-align: left
   }
+}
+
+.project-profile {
+  // width: 800px;
+  margin: 0 auto;
+  .title {
+    font-size: 20px;
+    text-align: left;
+  }
+  .text {
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 40px;
+    font-size: 16px;
+  }
+}
+
 // model-iview
 .sys-model-iview,
 .sys-model-manage,
@@ -152,7 +170,15 @@
 .sys-crash-detection,
 .sys-quantitative-statistics,
 .sys-risk-query,
-.sys-safety-precaution{
-    // width: 800px;
-    margin: 0 auto;
+.sys-safety-precaution {
+  // width: 800px;
+  margin: 0 auto;
+}
+.risk-standard{
+  .title{
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    background: #409EFF;
+  }
 }

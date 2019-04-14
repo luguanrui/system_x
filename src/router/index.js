@@ -12,6 +12,10 @@ import visualSimulation from '@/application/visual-simulation'
 import crashDetection from '@/application/crash-detection'
 import quantitativeStatistics from '@/application/quantitative-statistics'
 import riskQuery from '@/application/risk-query'
+import riskStandard from '@/application/risk-standard'
+import riskRun from '@/application/risk-run'
+import riseResult from '@/application/risk-result'
+import riskMeasure from '@/application/risk-measure'
 import safetyPrecaution from '@/application/safety-precaution'
 
 import { getCookie ,removeCookie} from 'utils-library'
@@ -93,6 +97,34 @@ const routes = [
           requireAuth: true,
         },
         component: riskQuery
+      },
+      {
+        path: 'risk-standard',
+        meta: {
+          requireAuth: true,
+        },
+        component: riskStandard
+      },
+      {
+        path: 'risk-run',
+        meta: {
+          requireAuth: true,
+        },
+        component: riskRun
+      },
+      {
+        path: 'risk-result',
+        meta: {
+          requireAuth: true,
+        },
+        component: riseResult
+      },
+      {
+        path: 'risk-measure',
+        meta: {
+          requireAuth: true,
+        },
+        component: riskMeasure
       },
       {
         path: 'safety-precaution',
