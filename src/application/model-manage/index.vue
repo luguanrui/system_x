@@ -13,7 +13,7 @@
           <el-table-column prop="uploader" label="上传人" align="center"></el-table-column>
           <el-table-column prop="preview" label="可见性" align="center">
               <template slot-scope="scope">
-                  <i class="el-icon-edit"></i>
+                  <i class="el-icon-view"></i>
               </template>
           </el-table-column>
           <el-table-column prop="delete" label="删除" align="center">
