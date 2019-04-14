@@ -3,7 +3,6 @@
         <el-table
                 :data="data"
                 style="width: 100%"
-                border
                 :header-cell-style="_headerCellStyle"
                 :span-method="objectSpanMethod"
         >
@@ -11,8 +10,12 @@
                 <template slot-scope="scope">演马庄西站施工安全风险预警体系</template>
             </el-table-column>
             <el-table-column prop="firstTarget" label="一级指标" align="center"></el-table-column>
-            <el-table-column prop="weightOne" label="权重" align="center"></el-table-column>
-            <el-table-column prop="secondTarget" label="二级指标" align="center" width="250">
+            <el-table-column prop="weightOne" label="权重" align="center">
+                <template slot-scope="scope">
+                        <el-input v-model="scope.row.weightOne" size="small"></el-input>
+                </template>
+            </el-table-column>
+            <el-table-column prop="secondTarget" label="二级指标" align="center" width="260">
                 <template slot-scope="scope">
                     <div v-for="item in scope.row.secondTarget" class="border-bottom" style="text-align: left">
                         {{item}}
@@ -21,43 +24,65 @@
             </el-table-column>
             <el-table-column prop="weightTwo" label="权重" align="center">
                 <template slot-scope="scope">
-                    <div v-for="item in scope.row.weightTwo" class="border-bottom">{{item}}</div>
+                    <div v-for="item in scope.row.weightTwo" class="border-bottom">
+                        <el-input :value="item" size="small"></el-input>
+                    </div>
                 </template>
             </el-table-column>
             <el-table-column prop="low" label="风险极低" align="center">
                 <template slot-scope="scope">
-                    <div v-for="item in scope.row.low" class="border-bottom">{{item}}</div>
+                    <div v-for="item in scope.row.low" class="border-bottom">
+                        <el-input :value="item" size="small"></el-input>
+                    </div>
                 </template>
             </el-table-column>
             <el-table-column prop="common" label="风险一般" align="center">
                 <template slot-scope="scope">
-                    <div v-for="item in scope.row.common" class="border-bottom">{{item}}</div>
+                    <div v-for="item in scope.row.common" class="border-bottom">
+                        <el-input :value="item" size="small"></el-input>
+                    </div>
                 </template>
             </el-table-column>
             <el-table-column prop="lower" label="风险较大" align="center">
                 <template slot-scope="scope">
-                    <div v-for="item in scope.row.lower" class="border-bottom">{{item}}</div>
+                    <div v-for="item in scope.row.lower" class="border-bottom">
+                        <el-input :value="item" size="small"></el-input>
+                    </div>
                 </template>
             </el-table-column>
             <el-table-column prop="high" label="风险重大" align="center">
                 <template slot-scope="scope">
-                    <div v-for="item in scope.row.high" class="border-bottom">{{item}}</div>
+                    <div v-for="item in scope.row.high" class="border-bottom">
+                        <el-input :value="item" size="small"></el-input>
+                    </div>
                 </template>
             </el-table-column>
             <el-table-column prop="higher" label="风险极高" align="center">
                 <template slot-scope="scope">
-                    <div v-for="item in scope.row.higher" class="border-bottom">{{item}}</div>
+                    <div v-for="item in scope.row.higher" class="border-bottom">
+                        <el-input :value="item" size="small"></el-input>
+                    </div>
                 </template>
             </el-table-column>
         </el-table>
+        <div style="margin: 30px 0">
+            <el-button>保存</el-button>
+            <el-button>计算</el-button>
+            <el-button>修改</el-button>
+            <el-button>预警结果</el-button>
+        </div>
         <div>
-            <ul style="text-align: left">
-                <li>综合评价值=</li>
-                <li>风险极低</li>
-                <li>风险一般</li>
-                <li>风险较大</li>
-                <li>风险重大</li>
-                <li>风险极高</li>
+            <ul>
+                <li>综合评价值= <el-input value="" style="width: 200px"></el-input></li>
+                <li>
+                    <el-radio-group v-model="radio">
+                        <li style="margin: 10px 0"><el-radio :label="0">风险极低</el-radio></li>
+                        <li style="margin: 10px 0"><el-radio :label="1">风险一般</el-radio></li>
+                        <li style="margin: 10px 0"><el-radio :label="2">风险较大</el-radio></li>
+                        <li style="margin: 10px 0"><el-radio :label="3">风险重大</el-radio></li>
+                        <li style="margin: 10px 0"><el-radio :label="4">风险极高</el-radio></li>
+                    </el-radio-group>
+                </li>
             </ul>
         </div>
     </div>
@@ -67,6 +92,7 @@
     export default {
         data() {
             return {
+                radio: 0,
                 data: [
                     {
                         firstTarget: '降排水',
@@ -157,11 +183,12 @@
         methods: {
             _headerCellStyle() {
                 return {
-                    padding: '12px 0'
+                    color: '#000',
+                    padding: '12px 0',
+                    background: '#409EFF'
                 }
             },
             objectSpanMethod({row, column, rowIndex, columnIndex}) {
-                console.log(row, column, rowIndex, columnIndex)
                 if (columnIndex === 0) {
                     if (rowIndex === 0) {
                         return {
@@ -179,26 +206,36 @@
         }
     }
 </script>
-<style>
-    .border-bottom {
+<style scoped>
+    .risk-run .border-bottom {
         height: 40px;
         line-height: 40px;
-        border-bottom: 1px solid #ebeef5;
+        padding: 1px 5px;
+        /*border-bottom: 1px solid #ebeef5;*/
     }
 
-    .border-bottom:last-child {
+    .risk-run .border-bottom:last-child {
         border: none;
     }
 
-    .el-table .cell, .el-table th div, .el-table--border td:first-child .cell, .el-table--border th:first-child .cell {
+    .risk-run .el-table .cell, .el-table th div, .el-table--border td:first-child .cell, .el-table--border th:first-child .cell {
         padding: 0;
     }
 
-    .el-table .cell, .el-table th div {
+    .risk-run .el-table .cell, .el-table th div {
         padding: 0;
     }
 
-    .el-table td, .el-table th {
+    .risk-run .el-table td, .el-table th {
         padding: 0;
+    }
+    .risk-run .el-table--enable-row-transition .el-table__body td{
+        background: #eee;
+    }
+    .risk-run .el-table td, .el-table th.is-leaf{
+        border: none !important;
+    }
+    .el-table th, .el-table tr{
+        background-color: #eee;
     }
 </style>

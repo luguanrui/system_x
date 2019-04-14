@@ -11,6 +11,7 @@
                     style="width: 100%"
                     border
                     :default-sort="{prop: 'date', order: 'descending'}"
+                    :header-cell-style="_headerCellStyle"
             >
                 <el-table-column type="index" label="等级" align="center" width="80"></el-table-column>
                 <el-table-column prop="desc" label="描述" align="center"></el-table-column>
@@ -63,6 +64,15 @@
                     },
                 ]
             }
+        },
+        methods: {
+            // :header-cell-style="_headerCellStyle"
+            _headerCellStyle() {
+                return {
+                    backgroundColor: '#409EFF',
+                    color: '#fff'
+                }
+            },
         }
     }
 </script>

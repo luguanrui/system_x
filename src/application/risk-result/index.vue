@@ -2,13 +2,14 @@
     <div class="risk-result">
         <el-table
                 :data="data"
-                style="width: 100%"
+                style="min-width: 500px"
                 border
+                height="500"
                 :default-sort="{prop: 'date', order: 'descending'}"
         >
-            <el-table-column type="index" label="序号" align="center" width="80"></el-table-column>
+            <el-table-column type="index" label="序号" align="center" width="60"></el-table-column>
             <el-table-column prop="name" label="指标名称" align="center"></el-table-column>
-            <el-table-column prop="green" label="" align="center">
+            <el-table-column prop="green" label="" align="center" width="100">
                 <template slot="header"  slot-scope="scope">
                     <div class="green">绿色预警</div>
                 </template>
@@ -16,7 +17,7 @@
                     <i class="el-icon-star-on" v-if="scope.row.green"></i>
                 </template>
             </el-table-column>
-            <el-table-column prop="blue" align="center">
+            <el-table-column prop="blue" align="center" width="100">
                 <template slot="header"  slot-scope="scope">
                     <div class="blue">蓝色预警</div>
                 </template>
@@ -24,7 +25,7 @@
                     <i class="el-icon-star-on" v-if="scope.row.blue"></i>
                 </template>
             </el-table-column>
-            <el-table-column prop="yellow" label="" align="center">
+            <el-table-column prop="yellow" label="" align="center" width="100">
                 <template slot="header"  slot-scope="scope">
                     <div class="yellow">黄色预警</div>
                 </template>
@@ -32,7 +33,7 @@
                     <i class="el-icon-star-on" v-if="scope.row.yellow"></i>
                 </template>
             </el-table-column>
-            <el-table-column prop="orange" label="" align="center">
+            <el-table-column prop="orange" label="" align="center" width="100">
                 <template slot="header"  slot-scope="scope">
                     <div class="orange">橙色预警</div>
                 </template>
@@ -40,7 +41,7 @@
                     <i class="el-icon-star-on" v-if="scope.row.orange"></i>
                 </template>
             </el-table-column>
-            <el-table-column prop="red" label="" align="center">
+            <el-table-column prop="red" label="" align="center" width="100">
                 <template slot="header"  slot-scope="scope">
                     <div class="red">红色预警</div>
                 </template>
@@ -49,7 +50,7 @@
                 </template>
             </el-table-column>
         </el-table>
-        <div style="margin: 30px">
+        <div style="margin: 30px;">
             <img src="./2.jpg" alt="">
         </div>
     </div>

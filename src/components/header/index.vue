@@ -1,25 +1,25 @@
 <template>
-  <div class="sys-header">
-    <h1 class="sys-header--title">
-      <i class="logo">
-        <img src="../../assets/timg.png" alt>
-      </i>
-      济南轨道交通 R1 线演马庄西站绿色施工 BIM 管控平台
-    </h1>
-    <div class="logout-btn">
-      <el-button type="text" @click="handleLogout">退出登录</el-button>
+    <div class="sys-header">
+        <h1 class="sys-header--title">
+            <i class="logo">
+                <img src="../../assets/timg.png" alt>
+            </i>
+            济南轨道交通演马庄西站信息化施工管控平台
+        </h1>
+        <div class="logout-btn">
+            <el-button type="text" @click="handleLogout">退出登录</el-button>
+        </div>
     </div>
-  </div>
 </template>
 <script>
-export default {
-  data() {
-    return {};
-  },
-  methods: {
-    handleLogout() {
-      this.$router.push({path: '/login'})
-    }
-  }
-};
+    export default {
+        data() {
+            return {};
+        },
+        methods: {
+            handleLogout() {
+                this.$router.push({path: '/login'})
+            }
+        }
+    };
 </script>

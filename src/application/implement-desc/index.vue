@@ -37,6 +37,7 @@
                 style="width: 100%"
                 border
                 :default-sort="{prop: 'date', order: 'descending'}"
+                :header-cell-style="_headerCellStyle"
         >
             <el-table-column prop="filename" label="文件名" align="left"></el-table-column>
             <el-table-column prop="builder" label="创建人" width="180" align="center"></el-table-column>
@@ -146,6 +147,15 @@
                     },
                 ]
             };
+        },
+        methods: {
+            // :header-cell-style="_headerCellStyle"
+            _headerCellStyle() {
+                return {
+                    backgroundColor: '#409EFF',
+                    color: '#fff'
+                }
+            },
         }
     };
 </script>

@@ -5,6 +5,7 @@
               style="width: 100%"
               border
               :default-sort="{prop: 'date', order: 'descending'}"
+              :header-cell-style="_headerCellStyle"
       >
           <el-table-column prop="name" label="模型名称" width="180" align="center"></el-table-column>
           <el-table-column prop="size" label="模型大小" width="180" align="center"></el-table-column>
@@ -110,6 +111,15 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+        //  :header-cell-style="_headerCellStyle"
+        _headerCellStyle() {
+            return {
+                backgroundColor: '#409EFF',
+                color: '#fff'
+            }
+        },
     }
 }
 </script>

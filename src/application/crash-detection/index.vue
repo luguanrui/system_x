@@ -5,7 +5,8 @@
             <!--<img src="./13.jpg" alt="" width="100%">-->
             <!--</el-tab-pane>-->
             <el-tab-pane label="查看碰撞报告" name="second">
-                <h5 style="text-align: left;margin-bottom: 20px">碰撞处理详细信息列表（其中：新建碰撞：0；活动碰撞：40；已审阅碰撞：0；已核准碰撞：0；已解决碰撞：0）</h5>
+                <h5 style="text-align: left;margin-bottom: 20px">
+                    碰撞处理详细信息列表（其中：新建碰撞：40；活动碰撞：0；已审阅碰撞：0；已核准碰撞：0；已解决碰撞：0）</h5>
                 <div style="text-align: left;margin-bottom: 20px">
                     状态：
                     <el-select v-model="value" placeholder="请选择" :style="style">
@@ -26,6 +27,7 @@
                         style="width: 100%"
                         border
                         :default-sort="{prop: 'date', order: 'descending'}"
+                        :header-cell-style="_headerCellStyle"
                 >
                     <el-table-column type="index" label="序号" align="center" width="80"></el-table-column>
                     <el-table-column prop="name" label="名称" align="center"></el-table-column>
@@ -49,7 +51,8 @@
                     <li style="display: inline-block;width: 50%;padding: 10px"><img src="./16.png" alt="" width="100%">
                     </li>
                 </ul>
-                <p style="text-align: justify;line-height: 34px">设计变更为侧墙在混凝土支撑下面位置1.0米范围内取消牛腿设计，车站22-44轴线混凝土支撑与侧墙交叉点处在施工混凝土支撑时预埋侧墙竖向钢筋连接器，侧墙竖向钢筋设置焊接接头；混凝土支撑下侧墙混凝土浇筑参照盖挖法施工的方式，采取预留注浆条件。</p>
+                <p style="text-align: justify;line-height: 34px">
+                    设计变更为侧墙在混凝土支撑下面位置1.0米范围内取消牛腿设计，车站22-44轴线混凝土支撑与侧墙交叉点处在施工混凝土支撑时预埋侧墙竖向钢筋连接器，侧墙竖向钢筋设置焊接接头；混凝土支撑下侧墙混凝土浇筑参照盖挖法施工的方式，采取预留注浆条件。</p>
             </el-tab-pane>
         </el-tabs>
     </div>
@@ -108,7 +111,14 @@
         methods: {
             handleClick(tab, event) {
                 console.log(tab, event);
-            }
+            },
+            // :header-cell-style="_headerCellStyle"
+            _headerCellStyle() {
+                return {
+                    backgroundColor: '#409EFF',
+                    color: '#fff'
+                }
+            },
         }
     };
 </script>
