@@ -2,12 +2,11 @@
     <div class="risk-result">
         <el-table
                 :data="data"
-                style="min-width: 500px"
                 border
                 height="500"
                 :default-sort="{prop: 'date', order: 'descending'}"
         >
-            <el-table-column type="index" label="序号" align="center" width="60"></el-table-column>
+            <el-table-column type="index" label="序号" align="center" width="60" fixed></el-table-column>
             <el-table-column prop="name" label="指标名称" align="center"></el-table-column>
             <el-table-column prop="green" label="" align="center" width="100">
                 <template slot="header"  slot-scope="scope">
@@ -243,6 +242,9 @@
     }
 </script>
 <style>
+    .risk-result{
+        display: flex;
+    }
     .green{
         color: #000;
         background: green;
