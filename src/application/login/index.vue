@@ -1,6 +1,6 @@
 <template>
   <div class="sys-login-wrapper">
-    <h1 class="title">济南轨道交通R1线演马庄西站绿色施工BIM管控平台</h1>
+    <h1 class="title">济南轨道交通演马庄西站信息化施工管控平台</h1>
     <div class="sys-login">
       <div class="sys-login-form">
         <el-form
