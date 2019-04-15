@@ -28,6 +28,7 @@
                         border
                         :default-sort="{prop: 'date', order: 'descending'}"
                         :header-cell-style="_headerCellStyle"
+                        height="600"
                 >
                     <el-table-column type="index" label="序号" align="center" width="80"></el-table-column>
                     <el-table-column prop="name" label="名称" align="center"></el-table-column>
@@ -95,7 +96,7 @@
                         introduce: '间隙碰撞',
                         status: '新建',
                         time: '2018/12/5 19:00:48',
-                        show: require('./6.jpg')
+                        show: require('./1.jpg')
                     },
                     {
                         name: '碰撞点2',
@@ -103,7 +104,55 @@
                         introduce: '间隙碰撞',
                         status: '新建',
                         time: '2018/12/5 19:00:48',
+                        show: require('./2.jpg')
+                    },
+                     {
+                        name: '碰撞点3',
+                        dot: 'E（-150）—22（-500）',
+                        introduce: '间隙碰撞',
+                        status: '新建',
+                        time: '2018/12/5 19:00:48',
+                        show: require('./3.jpg')
+                    },
+                     {
+                        name: '碰撞点4',
+                        dot: 'E（-150）—21（-499）',
+                        introduce: '间隙碰撞',
+                        status: '新建',
+                        time: '2018/12/5 19:00:48',
+                        show: require('./4.jpg')
+                    },
+                     {
+                        name: '碰撞点5',
+                        dot: 'E（-150）—20（-350）',
+                        introduce: '间隙碰撞',
+                        status: '新建',
+                        time: '2018/12/5 19:00:48 ',
+                        show: require('./5.jpg')
+                    },
+                     {
+                        name: '碰撞点6',
+                        dot: 'E（-150）—19（-349）',
+                        introduce: '间隙碰撞',
+                        status: '新建',
+                        time: ' 2018/12/5 19:00:48',
+                        show: require('./6.jpg')
+                    },
+                     {
+                        name: '碰撞点7',
+                        dot: 'E（-150）—18（-299）',
+                        introduce: '间隙碰撞',
+                        status: '新建',
+                        time: '2018/12/5 19:00:48',
                         show: require('./7.jpg')
+                    },
+                     {
+                        name: '碰撞点8',
+                        dot: 'E（-150）—17（-298）',
+                        introduce: '间隙碰撞',
+                        status: '新建',
+                        time: '2018/12/5 19:00:48',
+                        show: require('./8.jpg')
                     },
                 ]
             };
