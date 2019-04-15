@@ -1,13 +1,14 @@
 <template>
     <div class="risk-result">
-        <el-table
+        <div>
+    <el-table
                 :data="data"
                 border
                 height="500"
                 :default-sort="{prop: 'date', order: 'descending'}"
         >
             <el-table-column type="index" label="序号" align="center" width="60" fixed></el-table-column>
-            <el-table-column prop="name" label="指标名称" align="center"></el-table-column>
+            <el-table-column prop="name" label="指标名称" align="center" min-width="100px"></el-table-column>
             <el-table-column prop="green" label="" align="center" width="100">
                 <template slot="header"  slot-scope="scope">
                     <div class="green">绿色预警</div>
@@ -49,8 +50,9 @@
                 </template>
             </el-table-column>
         </el-table>
-        <div style="margin: 30px;">
-            <img src="./2.jpg" alt="">
+        </div>
+        <div style="margin: 0 0 0 30px;">
+            <img src="./2.jpg" alt="" width="100%" style="display: inline-block">
         </div>
     </div>
 </template>
@@ -244,6 +246,8 @@
 <style>
     .risk-result{
         display: flex;
+        align-items: start;
+        justify-content: center;
     }
     .green{
         color: #000;
